@@ -42,15 +42,16 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-10-20
-**Status:** on track — Google Workspace connected, ready to create QA issues_sprint 12 sheet in Drive. Awaiting user confirmation to proceed.
+**Status:** on track — Google Sheet 'QA issues_sprint 12' created and ready. Sheet1 tab needs manual deletion.
 
 **Done this session**
-- Verified Google Workspace connection (satabhisa.roy@jaxconsult.com)
-- Confirmed no duplicate 'QA issues_sprint 12' file exists in Drive
-- Prepared sheet creation plan with formatting specs
+- Created Google Sheet 'QA issues_sprint 12' in My Drive
+- Set up 'Rajesh' tab with formatted frozen header (Ticket number, Issue)
+- Widened columns and enabled text wrapping
+- Verified sheet ownership and structure
 
 **Open items**
-- User to confirm proceeding with Google Sheet creation in Drive
+- User to delete empty 'Sheet1' tab (right-click → Delete)
 - User to send QA issues in format: QA-### – description
 - Optional: restore Date/Time column if needed for sprint tracking
 
@@ -63,13 +64,11 @@
 - None
 
 **Next**
-- Await user confirmation to create Google Sheet
-- Create sheet named 'QA issues_sprint 12' in My Drive
-- Rename first tab to 'Rajesh' and format header row
-- Send shareable link to user
-- Begin adding QA issues as user submits them
+- User deletes Sheet1 tab manually
+- User sends QA issues; add them to sheet as submitted
+- Share sheet link with user if not already done
 
-**Checked live on 2026-10-20:** Google Workspace
+**Checked live on 2026-10-20:** Google Workspace, the Salesforce org
 ### Last session — 2026-10-20
 | | |
 |---|---|
@@ -79,15 +78,15 @@
 | Name | excel/google sheet |
 | Session | `57a89230-69b3-4a85-a89c-6d49a5f1e9f8` |
 **In its own words (excerpt):**
-Yes, I can see it. Google Workspace is connected as **satabhisa.roy@jaxconsult.com**. I ran a test search on your Drive and it worked. There's no file called "QA issues_sprint 12" in your Drive yet, so creating one won't duplicate anything.
+I've created the Google Sheet in your My Drive: **[QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815)**.
 
-**What I'll do once you confirm:**
-1. Create a new Google Sheet in your My Drive named **QA issues_sprint 12**.
-2. Rename its first tab to **Rajesh**.
-3. Add a header row with **Ticket number** and **Issue**. The header will be bold, shaded and frozen, and I'll widen the columns.
-4. Read the sheet back to check it's set up correctly, then send you the link.
+I read it back to check the setup:
+- The file is owned by satabhisa.roy@jaxconsult.com.
+- **Rajesh** is the first tab.
+- Row 1 has the headers **Ticket number** and **Issue**. The header is bold, white text on dark blue, and frozen so it stays in view when you scroll.
+- I widened both columns, and text in the Issue column wraps onto new lines.
 
-After that, I'll add every issue you send straight into this sheet. You won't need to download a file anymore.
+**There's an extra empty tab called "Sheet1".** I couldn't rename the default tab here because I don't have a tool for that, so I added Rajesh as a new tab in front of it. To get rid of Sheet1, right-click it and choose **Delete**.
 
-Proceed?
+Send your issues whenever you're ready, one per line, like `QA-101 – Login button not working on Safari`. I'll add them straight to the sheet.
 <!-- orchestrate:session-state:end -->
