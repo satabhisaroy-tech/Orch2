@@ -42,15 +42,16 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-10-20
-**Status:** on track — QA sheet live with first issue (CSP-858) logged. Sheet1 tab still needs deletion.
+**Status:** on track — QA sheet live with CSP-858 & CSP-127 logged. Sheet1 deletion & Salesforce attachments pending.
 
 **Done this session**
-- Added CSP-858 to Rajesh tab with full issue description
-- Verified entry saved in Google Sheet
+- Added CSP-127 to Rajesh tab with issue description
+- Verified CSP-127 entry saved in Google Sheet
 
 **Open items**
 - User to delete empty Sheet1 tab (right-click → Delete)
-- Attach CSP-858 screenshot to ticket in Salesforce
+- Attach CSP-858 screenshot to Salesforce ticket
+- Attach CSP-127 screenshot to Salesforce ticket (if available)
 - User to send next QA issues in format: QA-### – description
 - Check TrainingResourceController Apex class access in permission set for instructor users
 
@@ -64,8 +65,8 @@
 
 **Next**
 - User deletes Sheet1 tab manually
-- User attaches CSP-858 screenshot to Salesforce ticket
-- User sends next QA issues; add them to sheet as submitted
+- User attaches CSP-858 and CSP-127 screenshots to respective Salesforce tickets
+- User sends next QA issue; add to sheet as submitted
 - Investigate TrainingResourceController permission set access when Salesforce org attached
 
 **Checked live on 2026-10-20:** Google Workspace
@@ -78,15 +79,15 @@
 | Name | excel/google sheet |
 | Session | `57a89230-69b3-4a85-a89c-6d49a5f1e9f8` |
 **In its own words (excerpt):**
-I added CSP-858 to row 2 of the **Rajesh** tab in [QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815) and read the sheet back to check it saved.
+I added CSP-127 as row 3 on the **Rajesh** tab of [QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815), and checked that it saved.
 
 | Ticket number | Issue |
 |---|---|
-| CSP-858 | Logged in as Instructor on the Instructor portal (QA sandbox). The Home page **Resources** section shows *"You do not have access to the Apex class named 'TrainingResourceController'."* instead of loading. The CSP Staff Contacts below it still display. |
+| CSP-127 | AC-02: Report results should be filterable by academic term, course name/offering, and date range. Actual: the filter shows **Academic Session** instead of **Academic Term**. Ticket link included. |
 
-**What's probably causing it:** the instructor user's permissions don't give them access to the `TrainingResourceController` Apex class. The Resources component calls that class, so Salesforce blocks it for this user. The usual fix is to add Apex class access for `TrainingResourceController` to the permission set (or profile) that portal instructors get, then log in as an instructor again to check. I haven't checked this in the org, because no Salesforce org is attached to this session.
+- **Ticket details:** I couldn't open the CSP-127 ticket because Jira isn't connected here. The row is based only on what you wrote.
+- **Screenshot:** the image on this message is the CSP-858 one from before (the Resources / TrainingResourceController error). I didn't use it for CSP-127. If you have a screenshot of the report filter, send it and I'll add more detail to the row.
+- **Possible cause:** the report filter may be pointing at the Academic Session field rather than Academic Term, or the field label may just read "Session". I can't check this without a Salesforce org attached to the session.
 
-The screenshot can't go into the sheet from here, so attach it to the CSP-858 ticket directly.
-
-Send the next issue whenever you're ready.
+Send the next one whenever you're ready.
 <!-- orchestrate:session-state:end -->
