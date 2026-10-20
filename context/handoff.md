@@ -42,19 +42,20 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-10-20
-**Status:** on track — Resolved column added to QA sheet; dropdown setup needed. CSP-858 & CSP-127 tracked.
+**Status:** on track — QA sheet live with 3 issues tracked; dropdown & screenshots still pending
 
 **Done this session**
-- Added Resolved column (C) to QA issues_sprint 12 sheet with bold/blue header
-- Verified column saved with CSP-858 and CSP-127 marked 'No'
+- Added CSP-40 (enrollment capacity calculation) to QA sheet row 4, Resolved=No
 
 **Open items**
 - User to create Yes/No dropdown in Resolved column (C2:C200) via Data validation
 - User to delete empty Sheet1 tab
 - Attach CSP-858 screenshot to Salesforce ticket
 - Attach CSP-127 screenshot to Salesforce ticket (if available)
-- User to send next QA issues in format: QA-### – description
+- Attach CSP-40 screenshot to Salesforce ticket
+- Clarify with CSP-40 ticket owner: whether formula error is real or requirement wording mismatch
 - Check TrainingResourceController Apex class access in permission set for instructor users
+- User to send next QA issues in format: QA-### – description
 
 **Decisions**
 - Migrate from session-scoped Excel to persistent Google Sheet in Drive
@@ -69,8 +70,9 @@
 **Next**
 - User sets up Yes/No dropdown in Resolved column (C2:C200)
 - User deletes Sheet1 tab manually
-- User attaches CSP-858 and CSP-127 screenshots to Salesforce tickets
-- Rajesh or user adds next QA issues to sheet; Rajesh selects Resolved status from dropdown
+- User attaches CSP-858, CSP-127, and CSP-40 screenshots to respective Salesforce tickets
+- Clarify CSP-40 formula intent with ticket owner before marking resolved
+- Rajesh or user adds next QA issues; Rajesh selects Resolved status from dropdown
 
 **Checked live on 2026-10-20:** Google Workspace
 ### Last session — 2026-10-20
@@ -82,22 +84,14 @@
 | Name | excel/google sheet |
 | Session | `57a89230-69b3-4a85-a89c-6d49a5f1e9f8` |
 **In its own words (excerpt):**
-I added a **Resolved** column (C) to the Rajesh tab in [QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815) and read it back to check it saved:
+I added CSP-40 as row 4 on the **Rajesh** tab of [QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815) and read it back to make sure it saved.
 
 | Ticket number | Issue | Resolved |
 |---|---|---|
-| CSP-858 | Instructor portal Resources: no access to the TrainingResourceController Apex class | No |
-| CSP-127 | AC-02: report filter shows Academic Session instead of Academic Term | No |
+| CSP-40 | Available seats should be EnrollmentCapacity minus EnrolleeCount (per the requirement). Actual: the formula calculates EnrollmentCapacity minus Active enrollment count. | No |
 
-The header matches the other two (bold, white on dark blue), and the column is centred.
+- **Screenshot:** the image attached to this message is still the CSP-858 one (the Resources / TrainingResourceController error), so I didn't use it for CSP-40.
+- **Check with the ticket owner:** EnrolleeCount and an active-enrollment count can be the same number if EnrolleeCount only counts active enrollments. So it's worth asking whether the formula is actually giving a wrong number, or whether it just doesn't match how the requirement is worded. I can't check the formula myself because no Salesforce org is attached to this session.
 
-**I couldn't make it a Yes/No dropdown.** I don't have a tool here for adding dropdowns to a sheet, so for now the column is plain text with "No" typed in. You can turn it into a dropdown in about 20 seconds:
-1. Select the cells from **C2** downwards (for example, C2:C200).
-2. Go to **Data → Data validation → Add rule**.
-3. Under Criteria, pick **Dropdown** and enter two options: **Yes** and **No**.
-4. Click **Done**. The "No" values already in those cells will stay.
-
-**About the default of No:** a dropdown on its own won't fill in new rows. Every issue I add will have Resolved set to No. If Rajesh adds rows himself, he'll need to pick No fro
-
-_[summary truncated — see the session record for the full text]_
+Send the next one whenever you're ready.
 <!-- orchestrate:session-state:end -->
