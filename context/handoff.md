@@ -42,29 +42,32 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-10-20
-**Status:** done — Entry Log system created and ready. Excel workbook with Date/Time/Entry columns established.
+**Status:** on track — Entry Log repurposed for QA sprint 12 tracking. Sheet reset to Ticket/Issue columns, ready for issue entries.
 
 **Done this session**
-- Created Entry_Log.xlsx with 'Entry Log' tab
-- Configured three-column structure: #, Date/Time (IST), Entry
-- Logged initial message as entry 1
-- Documented workflow: new rows added per message, download before session end
+- Renamed workbook to QA issues_sprint 12.xlsx
+- Changed tab name to 'Rajesh'
+- Replaced Entry Log columns with Ticket number and Issue columns
+- Cleared previous test entry, sheet ready for QA data
 
 **Open items**
-- User to send next entry when ready
-- Optional: connect Google Workspace for live sheet sync if preferred
+- User to send QA issues in format: QA-### – description
+- Optional: restore Date/Time column if needed for sprint tracking
+- Optional: add Category, Tags, or Notes columns if required
 
 **Decisions**
-- Entry log format: Excel workbook, session-scoped (not cloud-synced by default)
-- Prefix 'don't log:' to exclude messages from logging
+- Entry log repurposed as QA sprint 12 tracker
+- Sheet structure: Ticket number, Issue (Date/Time removed per this session)
+- Session-scoped file, download before session end
+- Prefix 'don't log:' still available to exclude messages
 
 **Blockers**
 - None
 
 **Next**
-- User sends next message to be logged as entry 2
-- Optionally request additional columns (Category, Tags, Notes) if needed
-- Optionally connect Google Workspace Connector for live Drive integration
+- User sends QA issues to be added as rows
+- Confirm if Date/Time column should be restored
+- Attach updated workbook after each message
 
 **Checked live on 2026-10-20:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-10-20
@@ -76,15 +79,17 @@
 | Name | excel/google sheet |
 | Session | `57a89230-69b3-4a85-a89c-6d49a5f1e9f8` |
 **In its own words (excerpt):**
-Yes. I've created **Entry_Log.xlsx** and attached it to this session. It has one tab, "Entry Log", with three columns: **#**, **Date / Time (IST)** and **Entry**. Your message above is already logged as entry 1.
+I've attached the updated workbook to this session:
 
-How it'll work from here:
-- Each time you send a message, I'll add it as a new row and attach the updated workbook.
-- The rows build up across this session. If you start a new session, it begins with an empty sheet, so download the latest copy before you leave.
-- If you want something left out of the log, start the message with **"don't log:"**.
-- I can add more columns, like Category, Tags or Notes, if you want them.
+- **File name:** QA issues_sprint 12.xlsx
+- **Tab name:** Rajesh
+- **Columns:** Ticket number, Issue
 
-The file is created in this session, not in your own storage. Google Sheets isn't connected here. If you'd rather have a live sheet in your Google Drive that I update directly, connect Google Workspace in the **Connector Catalog** and I'll move the log there.
+I took out the old #, Date/Time and Entry columns and the first test entry, so the sheet now has only the header row. Let me know if you want the date column back.
 
-Send your next entry whenever you're ready.
+To add issues, send them in a format like this:
+- `QA-101 – Login button not working on Safari`
+- Or several at once, one per line.
+
+After each message I'll add the rows and attach the updated file. As before, the file only lasts for this session, so download the latest copy before you leave.
 <!-- orchestrate:session-state:end -->
