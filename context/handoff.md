@@ -42,10 +42,10 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-10-20
-**Status:** on track — QA sheet now has 5 issues tracked (CSP-40, CSP-858, CSP-127, CSP-515, CSP-42); screenshots & clarifications pending
+**Status:** on track — QA sheet now has 6 issues tracked (CSP-40, CSP-858, CSP-127, CSP-515, CSP-42, CSP-43); screenshots & clarifications pending
 
 **Done this session**
-- Added CSP-42 (Financial Metrics button on CO) to QA sheet row 6, Resolved=No
+- Added CSP-43 (Return Rate field on Course Offering) to QA sheet row 7, Resolved=No
 
 **Open items**
 - User to create Yes/No dropdown in Resolved column (C2:C200) via Data validation
@@ -55,7 +55,7 @@
 - Attach CSP-40 screenshot to Salesforce ticket
 - Attach CSP-515 screenshot to Salesforce ticket
 - Attach CSP-42 screenshot to Salesforce ticket
-- Clarify with CSP-40 ticket owner: whether formula error is real or requirement wording mismatch
+- Attach CSP-43 screenshot to Salesforce ticket
 
 **Decisions**
 - Migrate from session-scoped Excel to persistent Google Sheet in Drive
@@ -65,18 +65,15 @@
 - Default Resolved status is 'No' for all new issues
 
 **Blockers**
-- None
+- Salesforce org not connected to this session type; CSP-43 Return Rate field and CPT staff profiles cannot be verified without QA sandbox access
 
 **Next**
 - User sets up Yes/No dropdown in Resolved column (C2:C200)
 - User deletes Sheet1 tab manually
-- User attaches CSP-858, CSP-127, CSP-40, CSP-515, and CSP-42 screenshots to respective Salesforce tickets
-- Clarify CSP-40 formula intent with ticket owner before marking resolved
-- Investigate CSP-515 report filter: blank vs. 0 handling, filter logic, field scope
-- Investigate CSP-42 button: record ID in link, landing page filter, page layout version
-- Confirm CSP-42 CO means Course Offering
+- User attaches screenshots for CSP-858, CSP-127, CSP-40, CSP-515, CSP-42, CSP-43 to respective Salesforce tickets
+- Start new BUILD session with QA sandbox selected to verify CSP-43 Return Rate field type and CPT staff profiles
 
-**Checked live on 2026-10-20:** Google Workspace
+**Checked live on 2026-10-20:** Google Workspace, Slack, the repository
 ### Last session — 2026-10-20
 | | |
 |---|---|
@@ -86,17 +83,13 @@
 | Name | excel/google sheet |
 | Session | `57a89230-69b3-4a85-a89c-6d49a5f1e9f8` |
 **In its own words (excerpt):**
-I added CSP-42 as row 6 on the **Rajesh** tab of [QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815). I read the sheet back afterwards and the row is there.
+I added CSP-43 as row 7 on the **Rajesh** tab of [QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815), with Resolved set to No. I read it back and it saved.
 
-| Ticket number | Issue | Resolved |
-|---|---|---|
-| CSP-42 | Financial Metrics button on the CO (Course Offering) does not open the specific CO as described in the AC / test sheet. | No |
+**I couldn't answer either of your questions from here.** No Salesforce org is attached to this session and Jira isn't connected, so I can't see the Return Rate field, the CSP-43 ticket, or the org's profiles. I searched your Drive for anything on this:
+- **[CSP_Reporting_SolutionDesign_Finalv2.docx](https://docs.google.com/document/d/1R040ZrPtwTuyIFpT9bZsr7UMdGTjyplS/edit?usp=drivesdk):** has formulas for capacity utilization, breakeven and YOY change, but nothing called Return Rate.
+- **[To be shared with QA test cases](https://docs.google.com/document/d/1pV-Fnx39RHmU-JEP1cHD-PPmP0c837xk2_yVIO2k7HQ/edit?usp=drivesdk):** doesn't mention CSP-43, Return Rate or CPT staff.
 
-- **I assumed CO means Course Offering.** If it stands for something else, like Change Order, tell me and I'll fix the row.
-- **Screenshot:** the attached image is still the CSP-858 one (the Resources / TrainingResourceController error), so I didn't use it for this row.
-- **Row 5 was changed.** CSP-515 now says records with a *blank* count are still showing, where it used to say a count of 0. I didn't make that change, so Rajesh probably did. Blank values getting past a "greater than 0" filter fits one of the causes I mentioned earlier.
-- **Things to check on the button** (I can't look myself, because no Salesforce org is attached to this session):
-  - **Record ID in the link.** If the button's URL or flow doesn't pass the current record's ID (for example `{!Course_Of
+**How to check the formula yourself (about a minute):** go to Setup → Object Manager, open the object the field is on (probably Course Offering), then Fields & Relationships → Return Rate. If it's a formula field, the formula is shown there. A formula field is also read-only for everyone
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
