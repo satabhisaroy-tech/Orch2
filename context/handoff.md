@@ -42,34 +42,34 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-10-20
-**Status:** on track — Entry Log repurposed for QA sprint 12 tracking. Sheet reset to Ticket/Issue columns, ready for issue entries.
+**Status:** on track — Google Workspace connected, ready to create QA issues_sprint 12 sheet in Drive. Awaiting user confirmation to proceed.
 
 **Done this session**
-- Renamed workbook to QA issues_sprint 12.xlsx
-- Changed tab name to 'Rajesh'
-- Replaced Entry Log columns with Ticket number and Issue columns
-- Cleared previous test entry, sheet ready for QA data
+- Verified Google Workspace connection (satabhisa.roy@jaxconsult.com)
+- Confirmed no duplicate 'QA issues_sprint 12' file exists in Drive
+- Prepared sheet creation plan with formatting specs
 
 **Open items**
+- User to confirm proceeding with Google Sheet creation in Drive
 - User to send QA issues in format: QA-### – description
 - Optional: restore Date/Time column if needed for sprint tracking
-- Optional: add Category, Tags, or Notes columns if required
 
 **Decisions**
-- Entry log repurposed as QA sprint 12 tracker
-- Sheet structure: Ticket number, Issue (Date/Time removed per this session)
-- Session-scoped file, download before session end
-- Prefix 'don't log:' still available to exclude messages
+- Migrate from session-scoped Excel to persistent Google Sheet in Drive
+- Sheet structure: Ticket number, Issue columns with bold/shaded frozen header
+- Use satabhisa.roy@jaxconsult.com account for Drive access
 
 **Blockers**
 - None
 
 **Next**
-- User sends QA issues to be added as rows
-- Confirm if Date/Time column should be restored
-- Attach updated workbook after each message
+- Await user confirmation to create Google Sheet
+- Create sheet named 'QA issues_sprint 12' in My Drive
+- Rename first tab to 'Rajesh' and format header row
+- Send shareable link to user
+- Begin adding QA issues as user submits them
 
-**Checked live on 2026-10-20:** nothing — the status above is as recorded, not re-checked
+**Checked live on 2026-10-20:** Google Workspace
 ### Last session — 2026-10-20
 | | |
 |---|---|
@@ -79,17 +79,15 @@
 | Name | excel/google sheet |
 | Session | `57a89230-69b3-4a85-a89c-6d49a5f1e9f8` |
 **In its own words (excerpt):**
-I've attached the updated workbook to this session:
+Yes, I can see it. Google Workspace is connected as **satabhisa.roy@jaxconsult.com**. I ran a test search on your Drive and it worked. There's no file called "QA issues_sprint 12" in your Drive yet, so creating one won't duplicate anything.
 
-- **File name:** QA issues_sprint 12.xlsx
-- **Tab name:** Rajesh
-- **Columns:** Ticket number, Issue
+**What I'll do once you confirm:**
+1. Create a new Google Sheet in your My Drive named **QA issues_sprint 12**.
+2. Rename its first tab to **Rajesh**.
+3. Add a header row with **Ticket number** and **Issue**. The header will be bold, shaded and frozen, and I'll widen the columns.
+4. Read the sheet back to check it's set up correctly, then send you the link.
 
-I took out the old #, Date/Time and Entry columns and the first test entry, so the sheet now has only the header row. Let me know if you want the date column back.
+After that, I'll add every issue you send straight into this sheet. You won't need to download a file anymore.
 
-To add issues, send them in a format like this:
-- `QA-101 – Login button not working on Safari`
-- Or several at once, one per line.
-
-After each message I'll add the rows and attach the updated file. As before, the file only lasts for this session, so download the latest copy before you leave.
+Proceed?
 <!-- orchestrate:session-state:end -->
