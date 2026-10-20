@@ -42,10 +42,10 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-10-20
-**Status:** on track — QA sheet now has 4 issues tracked (CSP-40, CSP-858, CSP-127, CSP-515); dropdowns & screenshots still pending
+**Status:** on track — QA sheet now has 5 issues tracked (CSP-40, CSP-858, CSP-127, CSP-515, CSP-42); screenshots & clarifications pending
 
 **Done this session**
-- Added CSP-515 (Notify Me Demand report filter issue) to QA sheet row 5, Resolved=No
+- Added CSP-42 (Financial Metrics button on CO) to QA sheet row 6, Resolved=No
 
 **Open items**
 - User to create Yes/No dropdown in Resolved column (C2:C200) via Data validation
@@ -54,8 +54,8 @@
 - Attach CSP-127 screenshot to Salesforce ticket (if available)
 - Attach CSP-40 screenshot to Salesforce ticket
 - Attach CSP-515 screenshot to Salesforce ticket
+- Attach CSP-42 screenshot to Salesforce ticket
 - Clarify with CSP-40 ticket owner: whether formula error is real or requirement wording mismatch
-- Check TrainingResourceController Apex class access in permission set for instructor users
 
 **Decisions**
 - Migrate from session-scoped Excel to persistent Google Sheet in Drive
@@ -70,10 +70,11 @@
 **Next**
 - User sets up Yes/No dropdown in Resolved column (C2:C200)
 - User deletes Sheet1 tab manually
-- User attaches CSP-858, CSP-127, CSP-40, and CSP-515 screenshots to respective Salesforce tickets
+- User attaches CSP-858, CSP-127, CSP-40, CSP-515, and CSP-42 screenshots to respective Salesforce tickets
 - Clarify CSP-40 formula intent with ticket owner before marking resolved
-- Investigate CSP-515 report filter: check if filtering summary vs. row field, blank vs. 0 handling, filter logic, and field scope
-- Rajesh or user adds next QA issues in format QA-### – description; Rajesh selects Resolved status from dropdown
+- Investigate CSP-515 report filter: blank vs. 0 handling, filter logic, field scope
+- Investigate CSP-42 button: record ID in link, landing page filter, page layout version
+- Confirm CSP-42 CO means Course Offering
 
 **Checked live on 2026-10-20:** Google Workspace
 ### Last session — 2026-10-20
@@ -85,17 +86,17 @@
 | Name | excel/google sheet |
 | Session | `57a89230-69b3-4a85-a89c-6d49a5f1e9f8` |
 **In its own words (excerpt):**
-I added CSP-515 as row 5 on the **Rajesh** tab of [QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815) and read it back to confirm it saved.
+I added CSP-42 as row 6 on the **Rajesh** tab of [QA issues_sprint 12](https://docs.google.com/spreadsheets/d/1knM1CW-h5OXx8g4GVUwQaXZegZ8afUjJTMSeam-xBJE/edit#gid=497439815). I read the sheet back afterwards and the row is there.
 
 | Ticket number | Issue | Resolved |
 |---|---|---|
-| CSP-515 | Notify Me Demand report: the report is filtered to show only records where Interested/Waitlist count is greater than 0. Actual: records with a count of 0 are still showing. | No |
+| CSP-42 | Financial Metrics button on the CO (Course Offering) does not open the specific CO as described in the AC / test sheet. | No |
 
-- **Screenshot:** the image on this message is still the CSP-858 one (the Resources / TrainingResourceController error), so I didn't use it here. If you have a screenshot of the report, attach it to CSP-515.
-- **Things to check on the report** (I can't look myself, because no Salesforce org is attached to this session):
-  - **Filter on a summary vs. a row field.** If the count is a roll-up or summary formula, a row-level filter may not apply the way you'd expect. It might need a cross filter or a summary-level filter instead.
-  - **Blank vs. 0.** If the field is blank on some records and the filter treats blanks as zero, or the other way round, records can slip through.
-  - **Filter logic.** If the report has custom logic (e.g. `1 
+- **I assumed CO means Course Offering.** If it stands for something else, like Change Order, tell me and I'll fix the row.
+- **Screenshot:** the attached image is still the CSP-858 one (the Resources / TrainingResourceController error), so I didn't use it for this row.
+- **Row 5 was changed.** CSP-515 now says records with a *blank* count are still showing, where it used to say a count of 0. I didn't make that change, so Rajesh probably did. Blank values getting past a "greater than 0" filter fits one of the causes I mentioned earlier.
+- **Things to check on the button** (I can't look myself, because no Salesforce org is attached to this session):
+  - **Record ID in the link.** If the button's URL or flow doesn't pass the current record's ID (for example `{!Course_Of
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
